@@ -1,0 +1,161 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Theme CSS custom properties */
+:root,
+[data-theme='light'] {
+	--bg: #ffffff;
+	--bg-secondary: #f3f4f6;
+	--bg-tertiary: #e5e7eb;
+	--fg: #1a1a1a;
+	--fg-secondary: #4b5563;
+	--fg-muted: #9ca3af;
+	--accent: #d52b1e;
+	--accent-hover: #b91c1c;
+	--border: #d1d5db;
+	--card-bg: #ffffff;
+	--card-border: #e5e7eb;
+	--success: #16a34a;
+	--warning: #d97706;
+	--danger: #dc2626;
+	--progress-bg: #e5e7eb;
+}
+
+[data-theme='dim'] {
+	--bg: #1e1e2e;
+	--bg-secondary: #282840;
+	--bg-tertiary: #313152;
+	--fg: #cdd6f4;
+	--fg-secondary: #a6adc8;
+	--fg-muted: #6c7086;
+	--accent: #ef5350;
+	--accent-hover: #e53935;
+	--border: #45475a;
+	--card-bg: #282840;
+	--card-border: #45475a;
+	--success: #a6e3a1;
+	--warning: #f9e2af;
+	--danger: #f38ba8;
+	--progress-bg: #45475a;
+}
+
+[data-theme='dark'] {
+	--bg: #0d1117;
+	--bg-secondary: #161b22;
+	--bg-tertiary: #21262d;
+	--fg: #e6edf3;
+	--fg-secondary: #8b949e;
+	--fg-muted: #484f58;
+	--accent: #ef5350;
+	--accent-hover: #e53935;
+	--border: #30363d;
+	--card-bg: #161b22;
+	--card-border: #30363d;
+	--success: #3fb950;
+	--warning: #d29922;
+	--danger: #f85149;
+	--progress-bg: #30363d;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) {
+		--bg: #0d1117;
+		--bg-secondary: #161b22;
+		--bg-tertiary: #21262d;
+		--fg: #e6edf3;
+		--fg-secondary: #8b949e;
+		--fg-muted: #484f58;
+		--accent: #ef5350;
+		--accent-hover: #e53935;
+		--border: #30363d;
+		--card-bg: #161b22;
+		--card-border: #30363d;
+		--success: #3fb950;
+		--warning: #d29922;
+		--danger: #f85149;
+		--progress-bg: #30363d;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	font-family: system-ui, -apple-system, sans-serif;
+	margin: 0;
+	transition: background-color 200ms, color 200ms;
+}
+
+/* Utility classes using theme vars */
+@utility bg-theme {
+	background-color: var(--bg);
+}
+@utility bg-theme-secondary {
+	background-color: var(--bg-secondary);
+}
+@utility bg-theme-tertiary {
+	background-color: var(--bg-tertiary);
+}
+@utility text-theme {
+	color: var(--fg);
+}
+@utility text-theme-secondary {
+	color: var(--fg-secondary);
+}
+@utility text-theme-muted {
+	color: var(--fg-muted);
+}
+@utility text-accent {
+	color: var(--accent);
+}
+@utility bg-accent {
+	background-color: var(--accent);
+}
+@utility bg-accent-hover {
+	background-color: var(--accent-hover);
+}
+@utility border-theme {
+	border-color: var(--border);
+}
+@utility bg-card {
+	background-color: var(--card-bg);
+}
+@utility border-card {
+	border-color: var(--card-border);
+}
+@utility text-success {
+	color: var(--success);
+}
+@utility text-warning {
+	color: var(--warning);
+}
+@utility text-danger {
+	color: var(--danger);
+}
+@utility bg-success {
+	background-color: var(--success);
+}
+@utility bg-warning {
+	background-color: var(--warning);
+}
+@utility bg-danger {
+	background-color: var(--danger);
+}
+@utility bg-progress {
+	background-color: var(--progress-bg);
+}
+
+/* Calendar picker icon visibility in dark themes */
+[data-theme='dim'] input[type='date']::-webkit-calendar-picker-indicator,
+[data-theme='dark'] input[type='date']::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) input[type='date']::-webkit-calendar-picker-indicator {
+		filter: invert(1);
+	}
+}
