@@ -17,7 +17,7 @@
 
 	onMount(() => {
 		initFromStorage();
-		applyTheme();
+		applyTheme(getSettings().theme);
 	});
 
 	// Re-apply theme when settings change

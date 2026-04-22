@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { AlertTriangle, CheckCircle, Info, ExternalLink } from '@lucide/svelte';
-	import { getUSPresence } from '$lib/stores.svelte';
+	import type { USPresenceStatus } from '$lib/types';
+
+	interface Props {
+		presence: USPresenceStatus;
+	}
+
+	let { presence }: Props = $props();
 
 	const IRS_URL =
 		'https://www.irs.gov/individuals/international-taxpayers/substantial-presence-test';
 
-	const presence = $derived(getUSPresence());
-	const year = new Date().getFullYear();
 	const pct = $derived(Math.min(100, Math.round((presence.total / presence.threshold) * 100)));
 
 	let showInfo = $state(false);
@@ -37,15 +41,15 @@
 
 	<div class="space-y-1 text-sm">
 		<div class="flex justify-between">
-			<span>{year}: {presence.currentYearDays} days</span>
+			<span>{presence.year}: {presence.currentYearDays} days</span>
 			<span class="text-theme-muted">× 1 = {presence.currentYearDays}</span>
 		</div>
 		<div class="flex justify-between">
-			<span>{year - 1}: {presence.priorYearDays} days</span>
+			<span>{presence.year - 1}: {presence.priorYearDays} days</span>
 			<span class="text-theme-muted">÷ 3 = {presence.priorYearWeighted}</span>
 		</div>
 		<div class="flex justify-between">
-			<span>{year - 2}: {presence.twoYearsAgoDays} days</span>
+			<span>{presence.year - 2}: {presence.twoYearsAgoDays} days</span>
 			<span class="text-theme-muted">÷ 6 = {presence.twoYearsAgoWeighted}</span>
 		</div>
 	</div>

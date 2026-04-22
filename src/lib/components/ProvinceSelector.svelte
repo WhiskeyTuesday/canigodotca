@@ -4,6 +4,8 @@
 	import { getSettings, setSettings } from '$lib/stores.svelte';
 	import type { Province } from '$lib/types';
 
+	const SUPPORTED_PROVINCES: Province[] = ['bc'];
+
 	const settings = $derived(getSettings());
 </script>
 
@@ -19,9 +21,15 @@
 			class="w-full rounded-lg border border-theme bg-card px-3 py-2.5 text-theme transition-colors focus:border-accent focus:outline-none"
 		>
 			{#each PROVINCES as prov}
-				<option value={prov.code}>
-					🇨🇦 {prov.label} ({prov.threshold} days min.)
-				</option>
+				{#if SUPPORTED_PROVINCES.includes(prov.code)}
+					<option value={prov.code}>
+						🇨🇦 {prov.label} (~{prov.threshold} days present, calendar year)
+					</option>
+				{:else}
+					<option value={prov.code} disabled>
+						🇨🇦 {prov.label} — coming soon
+					</option>
+				{/if}
 			{/each}
 		</select>
 	</div>

@@ -40,12 +40,15 @@ export interface UserSettings {
 export interface ProvincialStatus {
 	daysPresent: number;
 	daysOutside: number;
+	daysElapsed: number;
 	threshold: number;
 	daysRemaining: number;
+	daysLeftInYear: number;
 	status: 'OK' | 'AT_RISK' | 'EXCEEDED';
 }
 
 export interface USPresenceStatus {
+	year: number;
 	currentYearDays: number;
 	priorYearDays: number;
 	twoYearsAgoDays: number;
@@ -61,6 +64,9 @@ export interface B1B2PresenceStatus {
 	worstDays: number;
 	windowStart: string;
 	windowEnd: string;
+	todayDays: number;
+	todayWindowStart: string;
+	todayWindowEnd: string;
 	threshold: number;
 	exceeds: boolean;
 }
