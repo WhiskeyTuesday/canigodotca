@@ -44,7 +44,7 @@
 
 	const allClear = $derived(
 		projProvincial && projUS && projB1B2
-			? projProvincial.status === 'OK' && !projUS.passes && !projB1B2.exceeds
+			? projProvincial.status !== 'EXCEEDED' && !projUS.passes && !projB1B2.exceeds
 			: true
 	);
 

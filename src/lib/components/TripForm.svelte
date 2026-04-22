@@ -35,6 +35,17 @@
 		}
 	});
 
+	// Default return date to departure date so the picker opens to the right month
+	let lastDeparture = '';
+	$effect(() => {
+		if (departureDate && departureDate !== lastDeparture) {
+			lastDeparture = departureDate;
+			if (!returnDate || returnDate < departureDate) {
+				returnDate = departureDate;
+			}
+		}
+	});
+
 	const destinations: { value: Destination; label: string }[] = [
 		{ value: 'home', label: 'Home Province' },
 		{ value: 'other_ca', label: 'Other Canada' },
@@ -126,6 +137,7 @@
 						id="return"
 						type="date"
 						bind:value={returnDate}
+						min={departureDate}
 						disabled={isSameDay}
 						required={!isSameDay}
 						class="w-full rounded-lg border border-theme bg-theme px-3 py-2 text-sm text-theme focus:border-accent focus:outline-none disabled:opacity-50"
