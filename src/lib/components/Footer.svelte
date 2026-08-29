@@ -14,7 +14,7 @@
 				&copy; {new Date().getFullYear()} canigo.ca &mdash; canigo is a project of <a href="https://www.elijasorensen.com" target="_blank" rel="noopener" class="underline hover:text-accent">Elija Sorensen</a> be good to each other, stay cool.
 			</p>
 			<p>
-				Please report any bugs via <a href="mailto:hello@elijasorensen.com" class="underline hover:text-accent">email</a> or <a href="https://github.com/whiskeytusday/canigo" target="_blank" rel="noopener" class="underline hover:text-accent">GitHub</a>.
+				Please report any bugs via <a href="mailto:hello@elijasorensen.com" class="underline hover:text-accent">email</a> or <a href="https://github.com/whiskeytuesday/canigodotca" target="_blank" rel="noopener" class="underline hover:text-accent">GitHub</a>.
 			</p>
 		</div>
 	</div>
