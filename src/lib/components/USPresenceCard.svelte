@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { AlertTriangle, CheckCircle, Info, ExternalLink } from '@lucide/svelte';
-	import type { USPresenceStatus } from '$lib/types';
+	import type { USPresenceStatus } from '#lib/types.ts';
 
 	interface Props {
 		presence: USPresenceStatus;

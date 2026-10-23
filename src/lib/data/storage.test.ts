@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type { StoredData, UserSettings, Trip } from '$lib/types';
+import type { StoredData, UserSettings, Trip } from '#lib/types.ts';
 import { migrateData, serializeToJSONL, parseJSONL } from './storage';
 
 const defaultSettings: UserSettings = {

@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { initFromStorage, getSettings, getTrips } from '$lib/stores.svelte';
-	import { applyTheme } from '$lib/theme';
-	import Header from '$lib/components/Header.svelte';
-	import ProvinceSelector from '$lib/components/ProvinceSelector.svelte';
-	import TripForm from '$lib/components/TripForm.svelte';
-	import TripList from '$lib/components/TripList.svelte';
-	import Dashboard from '$lib/components/Dashboard.svelte';
-	import TripPlanner from '$lib/components/TripPlanner.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import SaveLoadButtons from '$lib/components/SaveLoadButtons.svelte';
-	import Toast from '$lib/components/Toast.svelte';
-	import type { Trip } from '$lib/types';
+	import { initFromStorage, getSettings, getTrips } from '#lib/stores.svelte.ts';
+	import { applyTheme } from '#lib/theme.ts';
+	import Header from '#lib/components/Header.svelte';
+	import ProvinceSelector from '#lib/components/ProvinceSelector.svelte';
+	import TripForm from '#lib/components/TripForm.svelte';
+	import TripList from '#lib/components/TripList.svelte';
+	import Dashboard from '#lib/components/Dashboard.svelte';
+	import TripPlanner from '#lib/components/TripPlanner.svelte';
+	import Footer from '#lib/components/Footer.svelte';
+	import SaveLoadButtons from '#lib/components/SaveLoadButtons.svelte';
+	import Toast from '#lib/components/Toast.svelte';
+	import type { Trip } from '#lib/types.ts';
 
 	let editingTrip = $state<Trip | null>(null);
 

@@ -1,4 +1,4 @@
-import type { UserSettings } from '$lib/types';
+import type { UserSettings } from '#lib/types.ts';
 
 export function applyTheme(theme: UserSettings['theme']) {
 	if (typeof document === 'undefined') return;

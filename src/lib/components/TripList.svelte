@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Plane } from '@lucide/svelte';
-	import type { Trip } from '$lib/types';
+	import type { Trip } from '#lib/types.ts';
 	import TripCard from './TripCard.svelte';
 
 	interface Props {

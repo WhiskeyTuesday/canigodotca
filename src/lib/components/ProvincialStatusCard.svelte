@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { AlertTriangle, CheckCircle, Info, ExternalLink } from '@lucide/svelte';
-	import type { ProvincialStatus } from '$lib/types';
-	import type { ProvinceInfo } from '$lib/data/provinces';
-	import { daysInYear } from '$lib/data/calculations';
+	import type { ProvincialStatus } from '#lib/types.ts';
+	import type { ProvinceInfo } from '#lib/data/provinces.ts';
+	import { daysInYear } from '#lib/data/calculations.ts';
 
 	interface Props {
 		status: ProvincialStatus;

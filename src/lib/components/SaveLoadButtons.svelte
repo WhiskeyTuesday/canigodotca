@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Download, Upload, Save } from '@lucide/svelte';
-	import { getSettings, getTrips, getPlannedTrips, loadData, showToast } from '$lib/stores.svelte';
-	import { exportToJSONL, importFromJSONL, saveToLocalStorage } from '$lib/data/storage';
+	import { getSettings, getTrips, getPlannedTrips, loadData, showToast } from '#lib/stores.svelte.ts';
+	import { exportToJSONL, importFromJSONL, saveToLocalStorage } from '#lib/data/storage.ts';
 
 	let fileInput: HTMLInputElement;
 

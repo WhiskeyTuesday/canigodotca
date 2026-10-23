@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Sun, Moon, CloudMoon } from '@lucide/svelte';
-	import { getSettings, setSettings } from '$lib/stores.svelte';
-	import { applyTheme } from '$lib/theme';
+	import { getSettings, setSettings } from '#lib/stores.svelte.ts';
+	import { applyTheme } from '#lib/theme.ts';
 
 	const settings = $derived(getSettings());
 	type ThemeOption = 'light' | 'dim' | 'dark';

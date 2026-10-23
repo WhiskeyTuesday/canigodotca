@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Pencil, Trash2, Plane, MapPin, Globe } from '@lucide/svelte';
-	import { deleteTrip, deletePlannedTrip } from '$lib/stores.svelte';
-	import type { Trip, Destination } from '$lib/types';
+	import { deleteTrip, deletePlannedTrip } from '#lib/stores.svelte.ts';
+	import type { Trip, Destination } from '#lib/types.ts';
 
 	interface Props {
 		trip: Trip;

@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { MapPinPlus } from '@lucide/svelte';
-	import { getPlannedTrips } from '$lib/stores.svelte';
+	import { getPlannedTrips } from '#lib/stores.svelte.ts';
 	import TripForm from './TripForm.svelte';
 	import TripList from './TripList.svelte';
 	import ProjectionDashboard from './ProjectionDashboard.svelte';
-	import type { Trip } from '$lib/types';
+	import type { Trip } from '#lib/types.ts';
 
 	let editingPlannedTrip = $state<Trip | null>(null);
 

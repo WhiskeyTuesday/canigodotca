@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getSettings, setSettings } from '$lib/stores.svelte';
+	import { getSettings, setSettings } from '#lib/stores.svelte.ts';
 
 	const settings = $derived(getSettings());
 	const currentYear = new Date().getFullYear();

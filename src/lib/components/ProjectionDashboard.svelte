@@ -3,9 +3,9 @@
 	import ProvincialStatusCard from './ProvincialStatusCard.svelte';
 	import USPresenceCard from './USPresenceCard.svelte';
 	import B1B2PresenceCard from './B1B2PresenceCard.svelte';
-	import { getTrips, getPlannedTrips, getSettings } from '$lib/stores.svelte';
-	import { getProvinceInfo } from '$lib/data/provinces';
-	import { calculateProvincialStatus, calculateUSPresence, calculateB1B2Presence } from '$lib/data/calculations';
+	import { getTrips, getPlannedTrips, getSettings } from '#lib/stores.svelte.ts';
+	import { getProvinceInfo } from '#lib/data/provinces.ts';
+	import { calculateProvincialStatus, calculateUSPresence, calculateB1B2Presence } from '#lib/data/calculations.ts';
 
 	const settings = $derived(getSettings());
 	const trips = $derived(getTrips());

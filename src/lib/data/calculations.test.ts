@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type { Trip, Province } from '$lib/types';
+import type { Trip, Province } from '#lib/types.ts';
 import {
 	daysBetween,
 	daysInYear,

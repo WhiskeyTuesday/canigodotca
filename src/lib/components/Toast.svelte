@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getToast } from '$lib/stores.svelte';
+	import { getToast } from '#lib/stores.svelte.ts';
 
 	const toast = $derived(getToast());
 </script>

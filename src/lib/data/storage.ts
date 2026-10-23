@@ -1,4 +1,4 @@
-import type { StoredData, UserSettings, Trip } from '$lib/types';
+import type { StoredData, UserSettings, Trip } from '#lib/types.ts';
 
 const STORAGE_KEY = 'canigo_data';
 

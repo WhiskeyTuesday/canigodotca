@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Plus, Plane, X } from '@lucide/svelte';
-	import { addTrip, addPlannedTrip, updateTrip, updatePlannedTrip, generateId, getSettings } from '$lib/stores.svelte';
-	import type { Trip, Destination, DestinationLeg } from '$lib/types';
+	import { addTrip, addPlannedTrip, updateTrip, updatePlannedTrip, generateId, getSettings } from '#lib/stores.svelte.ts';
+	import type { Trip, Destination, DestinationLeg } from '#lib/types.ts';
 
 	interface Props {
 		mode?: 'history' | 'planned';

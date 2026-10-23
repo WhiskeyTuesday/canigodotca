@@ -1,6 +1,6 @@
-import type { UserSettings, Trip, StoredData, ProvincialStatus, USPresenceStatus, B1B2PresenceStatus } from '$lib/types';
-import { calculateProvincialStatus, calculateUSPresence, calculateB1B2Presence } from '$lib/data/calculations';
-import { loadFromLocalStorage, saveToLocalStorage } from '$lib/data/storage';
+import type { UserSettings, Trip, StoredData, ProvincialStatus, USPresenceStatus, B1B2PresenceStatus } from '#lib/types.ts';
+import { calculateProvincialStatus, calculateUSPresence, calculateB1B2Presence } from '#lib/data/calculations.ts';
+import { loadFromLocalStorage, saveToLocalStorage } from '#lib/data/storage.ts';
 
 const currentYear = new Date().getFullYear();
 

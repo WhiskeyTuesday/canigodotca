@@ -1,4 +1,4 @@
-import type { Province } from '$lib/types';
+import type { Province } from '#lib/types.ts';
 
 export interface ProvinceInfo {
 	code: Province;

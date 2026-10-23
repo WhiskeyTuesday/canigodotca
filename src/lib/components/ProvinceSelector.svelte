@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Home } from '@lucide/svelte';
-	import { PROVINCES } from '$lib/data/provinces';
-	import { getSettings, setSettings } from '$lib/stores.svelte';
-	import type { Province } from '$lib/types';
+	import { PROVINCES } from '#lib/data/provinces.ts';
+	import { getSettings, setSettings } from '#lib/stores.svelte.ts';
+	import type { Province } from '#lib/types.ts';
 
 	const SUPPORTED_PROVINCES: Province[] = ['bc'];
 

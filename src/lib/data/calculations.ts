@@ -1,4 +1,4 @@
-import type { Trip, Province, ProvincialStatus, USPresenceStatus, B1B2PresenceStatus } from '$lib/types';
+import type { Trip, Province, ProvincialStatus, USPresenceStatus, B1B2PresenceStatus } from '#lib/types.ts';
 import { getThreshold } from './provinces';
 
 export function daysBetween(start: string, end: string): number {
